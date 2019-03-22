@@ -49,19 +49,23 @@ int main(void)
 			Minover60=B[i];
 		}
 		i=0;
-		for(X=0;X==0;i++)//排序 
+		for(X=0;X==0;i++)//排序 B
 		{
-			X=1;
-			if(B[i]>B[i+2])
+			if(i>=(C-1))
+			{
+				i=0;
+				X=1;
+			}
+			if(B[i]>B[i+1])
 			{
 				cout << "B" << endl;
 				X=0;
 				p=0;
 				p=B[i];
-				B[i]=B[i+2];
-				B[i+2]=p;	
+				B[i]=B[i+1];
+				B[i+1]=p;	
 			}
-			if(i<(C-1))i=0;
+			
 		}
 		for(i=0;i<(C-1);i++)
 			cout << B[i] << " ";
@@ -79,19 +83,21 @@ int main(void)
 			Minover60=A[i];
 		}
 		i=0;
-		for(X=0;X==0;i++)
+		for(X=0;X==0;i++)//排序 A
 		{
-			X=1; 
-			if(A[i]>A[i+2])
+			if(i>=(C-1))
 			{
-				cout << "B" << endl;
+				i=0;
+				X=1;
+			} 
+			if(A[i]>A[i+1])
+			{
 				X=0;
 				p=0;
 				p=A[i];
-				A[i]=A[i+2];
-				A[i+2]=p;	
+				A[i]=A[i+1];
+				A[i+1]=p;	
 			}
-			if(i<(C-1))i=0;
 		}
 		for(i=0;i<(C-1);i++) 
 			cout << A[i] << " ";
